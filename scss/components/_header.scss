@@ -1,0 +1,95 @@
+$bg-color: #143239;
+
+%headers {
+    padding: 0;
+    margin: 0;
+    font-weight: 700;
+}
+
+header {
+    position: sticky;
+    top: 0;
+
+    background-color: $bg-color;
+    color: white;
+    padding: 16px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+
+    h1 {
+        font-size: 20px;
+        @extend %headers
+    }
+    
+    h2 {
+        font-size: 16px;
+        text-align: right;
+        @extend %headers
+    }
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+   
+    button {
+        padding: 5px 0;
+        border: 0;
+        background-color: transparent;
+        font-family: inherit;
+        color: white;
+        cursor: pointer;
+        &::after {
+            margin-left: 10px;
+            content: "\25BC";
+        }
+        &:hover {
+            background-color: #1f6b7e;
+        }
+    }
+    
+
+}
+
+.dropdown__content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 250px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 0;
+    a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+
+        &:hover {
+            background-color: #ddd;
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    header {
+        padding: 16px 20px;
+        h1 {
+            font-size: 20px;
+        }
+        h2 {
+            display: none;
+        }
+    }
+    .dropdown button {
+        font-size: 16px;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    header {
+        padding: 16px 30px;
+        font-size: 18px;
+    }
+}

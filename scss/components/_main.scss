@@ -1,0 +1,60 @@
+main {
+    flex: 1;
+    padding: 20px;
+    margin: auto;
+
+    max-height: 100vh;
+    overflow: hidden;
+
+    display: flex;
+    gap: 50px;
+
+    h3 {
+        margin: 0;
+    }
+
+    img {
+        width: 500px;
+
+    }
+
+    .main__title{
+        display: flex;
+        margin-bottom: 5px;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .main__block {
+        button {
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 10px;
+            border-color: #a4a2a2;
+            font-family: inherit;
+            cursor: pointer;
+            &:hover {
+                background-color: #dedede;
+            }
+        }
+    }
+
+    canvas {
+        border: 1px solid rgb(217, 217, 217);
+    }
+}
+
+@media screen and (max-width: 767px) {
+    main {
+        h3 {
+            font-size: 16px;
+        }
+        flex-direction: column;
+        .main__title {
+            flex-direction: column;
+        }
+        .main__block:has(canvas) > * {
+            display: none;
+        }
+    }
+}
