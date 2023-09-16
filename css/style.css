@@ -103,6 +103,11 @@ main .main__title {
   justify-content: space-between;
   align-items: center;
 }
+main .spline {
+  display: flex;
+  flex-direction: column;
+  max-width: 150px;
+}
 main .main__block button {
   padding: 10px;
   margin: 10px 0;

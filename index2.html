@@ -6,19 +6,18 @@
     <title>Лабораторные работы</title>
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700" rel="stylesheet">
-    <script defer src="js/lab1/imagesContainer.js"></script>
-    <script defer src="js/lab1/canvas.js"></script>
     <script defer src="js/script.js"></script>
+    <script defer src="js/lab2/bezier.js"></script>
 </head>
 <body>
     <div class="wrapper">
         <header>
             <div class="labs">
                 <h1>
-                    HTML,CSS,JS + Canvas
+                    Spline
                 </h1>
                 <div class="dropdown">
-                    <button id="dropdown__selected-btn" onclick="toggleDropdown()">Лабораторная работа #1</button>
+                    <button id="dropdown__selected-btn" onclick="toggleDropdown()">Лабораторная работа #2</button>
                     <div class="dropdown__content" id="dropdownMenu">
                         <a href="/index.html">Лабораторная работа #1</a>
                         <a href="/index2.html">Лабораторная работа #2</a>
@@ -30,28 +29,12 @@
             </h2>
         </header>
         <main>
-            <div class="main__block">
-                <div class="main__title">
-                    <h3>
-                        Узнай, какой ты Смешарик сегодня? 
-                    </h3>
-                    <button onclick="startAnimation()">Узнать</button>
-                </div>
-                <div class="container">
-                    <div class="selector"></div>
-                    <div id="images"></div>
-                </div>
+            <canvas id="myCanvas" width="1000" height="500"></canvas>
+            <div class="main__block spline">
+                <label for="vol">Кол-во отрезков:</label>
+                <input type="range" id="vol" value="0" min="0" max="50" step="5">
+                <div id="value">Текущее значение: 0</div>
             </div>
-            <div class="main__block">
-                <div class="main__title">
-                    <h3>
-                        Нарисуй своего Смешарика 
-                    </h3>
-                    <button onclick="clearCanvas()">Очистить</button>
-                </div>
-                <canvas id="myCanvas" width="500" height="500"></canvas>
-            </div>
-
         </main>
         <footer>
             <p>Алгоритмы компьютерной графики<br>Университет ИТМО 2023</p>
