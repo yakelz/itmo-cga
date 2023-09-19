@@ -1,44 +1,47 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Лабораторные работы</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700" rel="stylesheet">
-    <script defer src="js/script.js"></script>
-    <script defer src="js/lab2/bezier.js"></script>
-</head>
-<body>
-    <div class="wrapper">
-        <header>
-            <div class="labs">
-                <h1>
-                    Spline
-                </h1>
-                <div class="dropdown">
-                    <button id="dropdown__selected-btn" onclick="toggleDropdown()">Лабораторная работа #2</button>
-                    <div class="dropdown__content" id="dropdownMenu">
-                        <a href="/index.html">Лабораторная работа #1</a>
-                        <a href="/index2.html">Лабораторная работа #2</a>
-                    </div>
-                </div>
-            </div>
-            <h2>
-                Дашинамжилов Бато P34672
-            </h2>
-        </header>
-        <main>
-            <canvas id="myCanvas" width="1000" height="500"></canvas>
-            <div class="main__block spline">
-                <label for="vol">Кол-во отрезков:</label>
-                <input type="range" id="vol" value="0" min="0" max="50" step="5">
-                <div id="value">Текущее значение: 0</div>
-            </div>
-        </main>
-        <footer>
-            <p>Алгоритмы компьютерной графики<br>Университет ИТМО 2023</p>
-        </footer>
-    </div>
-</body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Лабораторные работы</title>
+		<link rel="stylesheet" href="css/style.css" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700"
+			rel="stylesheet"
+		/>
+		<script defer src="js/script.js"></script>
+		<script defer src="js/lab2/bezier.js"></script>
+	</head>
+	<body>
+		<div class="wrapper">
+			<header>
+				<div class="labs">
+					<h1>Spline</h1>
+					<div class="dropdown">
+						<button id="dropdown__selected-btn" onclick="toggleDropdown()">
+							Лабораторная работа #2
+						</button>
+						<div class="dropdown__content" id="dropdownMenu">
+							<a href="/index.html">Лабораторная работа #1</a>
+							<a href="/index2.html">Лабораторная работа #2</a>
+						</div>
+					</div>
+				</div>
+				<h2>Дашинамжилов Бато P34672</h2>
+			</header>
+			<main>
+				<div class="main__block">
+					<canvas id="myCanvas" width="1000" height="500"></canvas>
+				</div>
+				<div class="main__block spline">
+					<label for="vol">Кол-во отрезков:</label>
+					<input type="range" id="vol" value="20" min="1" max="20" step="1" />
+					<div id="value">Текущее значение: 20</div>
+				</div>
+			</main>
+			<footer>
+				<p>Алгоритмы компьютерной графики<br />Университет ИТМО 2023</p>
+			</footer>
+		</div>
+	</body>
 </html>
