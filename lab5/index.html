@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Лабораторные работы</title>
+		<link rel="stylesheet" href="../css/style.css" />
+		<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700" rel="stylesheet" />
+		<script defer src="../js/script.js"></script>
+		<script defer src="../js/lab5/heatmap.js"></script>
+	</head>
+	<body>
+		<div class="wrapper">
+			<header>
+				<div class="labs">
+					<h1>Heatmap</h1>
+					<div class="dropdown">
+						<button id="dropdown__selected-btn" onclick="toggleDropdown()">
+							Лабораторная работа #5
+						</button>
+						<div class="dropdown__content" id="dropdownMenu">
+							<a href="../">Лабораторная работа #1</a>
+							<a href="../lab2/">Лабораторная работа #2</a>
+							<a href="../lab3/">Лабораторная работа #3</a>
+							<a href="./">Лабораторная работа #3</a>
+						</div>
+					</div>
+				</div>
+				<h2>Дашинамжилов Бато P34672</h2>
+			</header>
+			<main>
+				<div class="main__row">
+					<div class="main__block">
+						<canvas id="original" width="200" height="200"></canvas>
+						<p>Original</p>
+						<div class="buttons">
+							<button id="prevBtn">Пред.</button>
+							<button id="nextBtn">След.</button>
+						</div>
+					</div>
+					<div class="main__block">
+						<canvas id="grayscale" width="200" height="200"></canvas>
+						<p>Grayscale</p>
+						<button class="downloadBtn">Скачать</button>
+					</div>
+					<div class="main__block">
+						<canvas id="photoshop" width="200" height="200"></canvas>
+						<p>Photoshop</p>
+						<button class="downloadBtn">Скачать</button>
+					</div>
+					<div class="main__block">
+						<canvas id="heatmap" width="200" height="200"></canvas>
+						<p>Heatmap</p>
+						<button class="downloadBtn">Скачать</button>
+					</div>
+				</div>
+				<div id="colorContainer"></div>
+			</main>
+			<footer>
+				<p>Алгоритмы компьютерной графики<br />Университет ИТМО 2023</p>
+			</footer>
+		</div>
+	</body>
+</html>

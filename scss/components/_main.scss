@@ -1,66 +1,102 @@
 main {
-    flex: 1;
-    padding: 20px;
-    margin: auto;
+	flex: 1;
+	padding: 20px;
+	margin: auto;
+	overflow: hidden;
 
-    max-height: 100vh;
-    overflow: hidden;
+	width: 1000px;
 
-    display: flex;
-    gap: 50px;
+	display: flex;
+	gap: 50px;
+	flex-wrap: wrap;
+	justify-content: space-between;
 
-    h3 {
-        margin: 0;
-    }
+	p {
+		margin: 5px 0;
+	}
 
-    img {
-        width: 500px;
+	h3 {
+		margin: 0;
+	}
 
-    }
+	img {
+		width: 500px;
+	}
 
-    .main__title{
-        display: flex;
-        margin-bottom: 5px;
-        justify-content: space-between;
-        align-items: center;
-    }
+	.main__title {
+		display: flex;
+		margin-bottom: 5px;
+		justify-content: space-between;
+		align-items: center;
+	}
 
-    .spline {
-        display: flex;
-        flex-direction: column;
-        max-width: 150px;
-    }
+	.main__row {
+		display: flex;
+		width: 100%;
+		justify-content: space-between;
+		gap: 50px;
+		margin-bottom: 20px;
+	}
 
-    .main__block {
-        button {
-            padding: 10px;
-            margin: 10px 0;
-            border-radius: 10px;
-            border-color: #a4a2a2;
-            font-family: inherit;
-            cursor: pointer;
-            &:hover {
-                background-color: #dedede;
-            }
-        }
-    }
+	#colorContainer {
+		display: flex;
+		flex-wrap: wrap;
+		width: 100%;
+	}
 
-    canvas {
-        border: 1px solid rgb(217, 217, 217);
-    }
+	#colorContainer div {
+		display: flex;
+		justify-content: center;
+		flex: 1;
+		height: 40px;
+		align-items: center;
+	}
+
+	.main__block {
+		max-height: 120px;
+		display: flex;
+		flex-direction: column;
+
+		.buttons {
+			display: flex;
+			justify-content: space-between;
+		}
+		button {
+			padding: 10px;
+			border-radius: 10px;
+			border-color: #a4a2a2;
+			font-family: inherit;
+			cursor: pointer;
+			&:hover {
+				background-color: #dedede;
+			}
+		}
+	}
+
+	.slider {
+		display: flex;
+		flex-direction: column;
+		#vol {
+			margin: 0;
+		}
+	}
+
+	canvas {
+		border: 1px solid rgb(217, 217, 217);
+	}
 }
 
 @media screen and (max-width: 767px) {
-    main {
-        h3 {
-            font-size: 16px;
-        }
-        flex-direction: column;
-        .main__title {
-            flex-direction: column;
-        }
-        .main__block:has(canvas) > * {
-            display: none;
-        }
-    }
+	main {
+		h3 {
+			font-size: 16px;
+		}
+		flex-direction: column;
+		.main__title {
+			flex-direction: column;
+		}
+		.main__block:has(canvas) > * {
+			display: none;
+		}
+	}
 }

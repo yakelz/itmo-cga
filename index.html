@@ -1,61 +1,58 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Лабораторные работы</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700" rel="stylesheet">
-    <script defer src="js/lab1/imagesContainer.js"></script>
-    <script defer src="js/lab1/canvas.js"></script>
-    <script defer src="js/script.js"></script>
-</head>
-<body>
-    <div class="wrapper">
-        <header>
-            <div class="labs">
-                <h1>
-                    HTML,CSS,JS + Canvas
-                </h1>
-                <div class="dropdown">
-                    <button id="dropdown__selected-btn" onclick="toggleDropdown()">Лабораторная работа #1</button>
-                    <div class="dropdown__content" id="dropdownMenu">
-                        <a href="../">Лабораторная работа #1</a>
-                        <a href="./lab2">Лабораторная работа #2</a>
-                    </div>
-                </div>
-            </div>
-            <h2>
-                Дашинамжилов Бато P34672
-            </h2>
-        </header>
-        <main>
-            <div class="main__block">
-                <div class="main__title">
-                    <h3>
-                        Узнай, какой ты Смешарик сегодня? 
-                    </h3>
-                    <button onclick="startAnimation()">Узнать</button>
-                </div>
-                <div class="container">
-                    <div class="selector"></div>
-                    <div id="images"></div>
-                </div>
-            </div>
-            <div class="main__block">
-                <div class="main__title">
-                    <h3>
-                        Нарисуй своего Смешарика 
-                    </h3>
-                    <button onclick="clearCanvas()">Очистить</button>
-                </div>
-                <canvas id="myCanvas" width="500" height="500"></canvas>
-            </div>
-
-        </main>
-        <footer>
-            <p>Алгоритмы компьютерной графики<br>Университет ИТМО 2023</p>
-        </footer>
-    </div>
-</body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Лабораторные работы</title>
+		<link rel="stylesheet" href="css/style.css" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700"
+			rel="stylesheet"
+		/>
+		<script defer src="js/lab1/imagesContainer.js"></script>
+		<script defer src="js/lab1/canvas.js"></script>
+		<script defer src="js/script.js"></script>
+	</head>
+	<body>
+		<div class="wrapper">
+			<header>
+				<div class="labs">
+					<h1>HTML,CSS,JS + Canvas</h1>
+					<div class="dropdown">
+						<button id="dropdown__selected-btn" onclick="toggleDropdown()">
+							Лабораторная работа #1
+						</button>
+						<div class="dropdown__content" id="dropdownMenu">
+							<a href="../">Лабораторная работа #1</a>
+							<a href="./lab2">Лабораторная работа #2</a>
+							<a href="./lab3">Лабораторная работа #3</a>
+						</div>
+					</div>
+				</div>
+				<h2>Дашинамжилов Бато P34672</h2>
+			</header>
+			<main>
+				<div class="main__block">
+					<div class="main__title">
+						<h3>Узнай, какой ты Смешарик сегодня?</h3>
+						<button onclick="startAnimation()">Узнать</button>
+					</div>
+					<div class="container">
+						<div class="selector"></div>
+						<div id="images"></div>
+					</div>
+				</div>
+				<div class="main__block">
+					<div class="main__title">
+						<h3>Нарисуй своего Смешарика</h3>
+						<button onclick="clearCanvas()">Очистить</button>
+					</div>
+					<canvas id="myCanvas" width="500" height="500"></canvas>
+				</div>
+			</main>
+			<footer>
+				<p>Алгоритмы компьютерной графики<br />Университет ИТМО 2023</p>
+			</footer>
+		</div>
+	</body>
 </html>

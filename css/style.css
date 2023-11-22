@@ -50,7 +50,7 @@ header h2 {
   background-color: #f9f9f9;
   min-width: 250px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  z-index: 0;
+  z-index: 5;
 }
 .dropdown__content a {
   color: black;
@@ -86,10 +86,15 @@ main {
   flex: 1;
   padding: 20px;
   margin: auto;
-  max-height: 100vh;
   overflow: hidden;
+  width: 1000px;
   display: flex;
   gap: 50px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+main p {
+  margin: 5px 0;
 }
 main h3 {
   margin: 0;
@@ -103,14 +108,36 @@ main .main__title {
   justify-content: space-between;
   align-items: center;
 }
-main .spline {
+main .main__row {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  gap: 50px;
+  margin-bottom: 20px;
+}
+main #colorContainer {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+main #colorContainer div {
+  display: flex;
+  justify-content: center;
+  flex: 1;
+  height: 40px;
+  align-items: center;
+}
+main .main__block {
+  max-height: 120px;
   display: flex;
   flex-direction: column;
-  max-width: 150px;
+}
+main .main__block .buttons {
+  display: flex;
+  justify-content: space-between;
 }
 main .main__block button {
   padding: 10px;
-  margin: 10px 0;
   border-radius: 10px;
   border-color: #a4a2a2;
   font-family: inherit;
@@ -118,6 +145,13 @@ main .main__block button {
 }
 main .main__block button:hover {
   background-color: #dedede;
+}
+main .slider {
+  display: flex;
+  flex-direction: column;
+}
+main .slider #vol {
+  margin: 0;
 }
 main canvas {
   border: 1px solid rgb(217, 217, 217);
@@ -153,6 +187,7 @@ footer p {
   width: 500px;
   height: 500px;
   overflow: hidden;
+  z-index: -1;
   border: 1px solid rgb(217, 217, 217);
   position: relative;
 }
