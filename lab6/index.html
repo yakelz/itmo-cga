@@ -7,56 +7,64 @@
 		<link rel="stylesheet" href="../css/style.css" />
 		<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700" rel="stylesheet" />
 		<script defer src="../js/script.js"></script>
-		<script defer src="../js/lab5/heatmap.js"></script>
+		<script defer src="../js/lab6/hdr.js"></script>
 	</head>
 	<body>
 		<div class="wrapper">
 			<header>
 				<div class="labs">
-					<h1>Heatmap</h1>
+					<h1>HDR</h1>
 					<div class="dropdown">
 						<button id="dropdown__selected-btn" onclick="toggleDropdown()">
-							Лабораторная работа #5
+							Лабораторная работа #6
 						</button>
 						<div class="dropdown__content" id="dropdownMenu">
 							<a href="../">Лабораторная работа #1</a>
 							<a href="../lab2/">Лабораторная работа #2</a>
 							<a href="../lab3/">Лабораторная работа #3</a>
 							<a href="../lab4/">Лабораторная работа #4</a>
+							<a href="../lab5/">Лабораторная работа #5</a>
 							<a href="./">Лабораторная работа #5</a>
-							<a href="../lab6/">Лабораторная работа #6</a>
 						</div>
 					</div>
 				</div>
 				<h2>Дашинамжилов Бато P34672</h2>
 			</header>
-			<main>
-				<div class="main__row">
-					<div class="main__block">
-						<canvas id="original" width="200" height="200"></canvas>
-						<p>Original</p>
-						<div class="buttons">
-							<button id="prevBtn">Пред.</button>
-							<button id="nextBtn">След.</button>
+			<main style="max-height: 800px">
+				<div>
+					<div class="main__row">
+						<div class="main__block">
+							<canvas id="low" width="300" height="300"></canvas>
+							<p>Original Low</p>
+						</div>
+						<div class="main__block">
+							<canvas id="mid" width="300" height="300"></canvas>
+							<p>Original Mid</p>
+						</div>
+						<div class="main__block">
+							<canvas id="high" width="300" height="300"></canvas>
+							<p>Original High</p>
 						</div>
 					</div>
-					<div class="main__block">
-						<canvas id="grayscale" width="200" height="200"></canvas>
-						<p>Grayscale</p>
-						<button class="downloadBtn">Скачать</button>
+					<div class="main__row">
+						<div class="main__block">
+							<canvas id="photoshop" width="300" height="300"></canvas>
+							<p>Photoshop HDR</p>
+							<button class="downloadBtn">Скачать</button>
+						</div>
+						<div class="main__block">
+							<canvas id="myhdr" width="300" height="300"></canvas>
+							<p>HDR</p>
+							<button class="downloadBtn">Скачать</button>
+						</div>
+						<div class="main__block">
+							<canvas id="heatmap" width="300" height="300"></canvas>
+							<p>Heatmap</p>
+							<button class="downloadBtn">Скачать</button>
+						</div>
 					</div>
-					<div class="main__block">
-						<canvas id="photoshop" width="200" height="200"></canvas>
-						<p>Photoshop</p>
-						<button class="downloadBtn">Скачать</button>
-					</div>
-					<div class="main__block">
-						<canvas id="heatmap" width="200" height="200"></canvas>
-						<p>Heatmap</p>
-						<button class="downloadBtn">Скачать</button>
-					</div>
+					<div id="colorContainer"></div>
 				</div>
-				<div id="colorContainer"></div>
 			</main>
 			<footer>
 				<p>Алгоритмы компьютерной графики<br />Университет ИТМО 2023</p>

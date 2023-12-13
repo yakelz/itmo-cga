@@ -23,57 +23,63 @@
 							<a href="../lab2/">Лабораторная работа #2</a>
 							<a href="./">Лабораторная работа #3</a>
 							<a href="../lab4/">Лабораторная работа #4</a>
+							<a href="../lab5/">Лабораторная работа #5</a>
+							<a href="../lab6/">Лабораторная работа #6</a>
 						</div>
 					</div>
 				</div>
 				<h2>Дашинамжилов Бато P34672</h2>
 			</header>
 			<main>
-				<div class="main__block">
-					<canvas id="original" width="200" height="200"></canvas>
-					<div class="buttons">
-						<button id="prevBtn">Пред.</button>
-						<button id="nextBtn">След.</button>
+				<div class="main__row">
+					<div class="main__block">
+						<canvas id="original" width="200" height="200"></canvas>
+						<div class="buttons">
+							<button id="prevBtn">Пред.</button>
+							<button id="nextBtn">След.</button>
+						</div>
+					</div>
+					<div class="main__block">
+						<canvas id="grayscale" width="200" height="200"></canvas>
+						<button class="downloadBtn">Скачать</button>
+					</div>
+					<div class="main__block">
+						<canvas id="brightness" width="200" height="200"></canvas>
+						<button class="downloadBtn">Скачать</button>
+						<div class="slider">
+							<label for="vol">Яркость:</label>
+							<input type="range" id="brightnessSlider" value="0" min="-255" max="255" step="1" />
+							<div id="brightnessValue">Текущее значение: 0</div>
+						</div>
+					</div>
+
+					<div class="main__block">
+						<canvas id="contrast" width="200" height="200"></canvas>
+						<button class="downloadBtn">Скачать</button>
+						<div class="slider">
+							<label for="vol">Контрастность:</label>
+							<input type="range" id="contrastSlider" value="0" min="-255" max="255" step="1" />
+							<div id="contrastValue">Текущее значение: 0</div>
+						</div>
 					</div>
 				</div>
-				<div class="main__block">
-					<canvas id="grayscale" width="200" height="200"></canvas>
-					<button class="downloadBtn">Скачать</button>
-				</div>
-				<div class="main__block">
-					<canvas id="brightness" width="200" height="200"></canvas>
-					<button class="downloadBtn">Скачать</button>
-					<div class="slider">
-						<label for="vol">Яркость:</label>
-						<input type="range" id="brightnessSlider" value="0" min="-255" max="255" step="1" />
-						<div id="brightnessValue">Текущее значение: 0</div>
+
+				<div class="main__row">
+					<div class="main__block">
+						<canvas id="originalHistogram" width="200" height="200"></canvas>
 					</div>
-				</div>
 
-				<div class="main__block">
-					<canvas id="contrast" width="200" height="200"></canvas>
-					<button class="downloadBtn">Скачать</button>
-					<div class="slider">
-						<label for="vol">Контрастность:</label>
-						<input type="range" id="contrastSlider" value="0" min="-255" max="255" step="1" />
-						<div id="contrastValue">Текущее значение: 0</div>
+					<div class="main__block">
+						<canvas id="grayscaleHistogram" width="200" height="200"></canvas>
 					</div>
-				</div>
 
-				<div class="main__block">
-					<canvas id="originalHistogram" width="200" height="200"></canvas>
-				</div>
+					<div class="main__block">
+						<canvas id="brightnessHistogram" width="200" height="200"></canvas>
+					</div>
 
-				<div class="main__block">
-					<canvas id="grayscaleHistogram" width="200" height="200"></canvas>
-				</div>
-
-				<div class="main__block">
-					<canvas id="brightnessHistogram" width="200" height="200"></canvas>
-				</div>
-
-				<div class="main__block">
-					<canvas id="contrastHistogram" width="200" height="200"></canvas>
+					<div class="main__block">
+						<canvas id="contrastHistogram" width="200" height="200"></canvas>
+					</div>
 				</div>
 			</main>
 			<footer>
